@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great|Lovers+Quarrel");
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0%;
+  background: #fce8e8;
+  animation-name: beat-back;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+@keyframes beat-back {
+  50% {
+    background: #ffe6f2;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* transform: translateY(-50px); */
+  /* margin-top: -63px; */
+}
+
+.topic {
+  font-weight: lighter;
+  font-family: Fredericka the Great;
+}
+.content-1 {
+  font-family: Lovers Quarrel;
+  font-size: 40px;
+  margin-top: 10px;
+}
+.heart {
+  margin: 80px 0px 0px 0px;
+  height: 80px;
+  width: 80px;
+  /* background: #f20055; */
+  position: relative;
+  transform: rotate(-45deg);
+  /* box-shadow: -10px 10px 90px #f20044; */
+  animation: heart 0.9s linear infinite;
+}
+
+@keyframes heart {
+  0% {
+    transform: rotate(-45deg) scale(1.07);
+  }
+  80% {
+    transform: rotate(-45deg) scale(1);
+  }
+  100% {
+    transform: rotate(-45deg) scale(1.08);
+  }
+}
+
+.heart::before {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  /* background: #f20044; */
+  top: -40px;
+  border-radius: 50px;
+  /* box-shadow: -10px -10px 90px #f20044; */
+}
+
+.heart::after {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  /* background: #f20044; */
+  right: -40px;
+  border-radius: 50px;
+  /* box-shadow: 10px -10px 90px #f20044; */
+}
+
+.heart.red,
+.heart.red::before,
+.heart.red::after {
+  background: #f20044;
+  box-shadow: -10px 10px 90px #f20044;
+}
+
+.heart.yellow,
+.heart.yellow::before,
+.heart.yellow::after {
+  background: #fbca57;
+  box-shadow: -10px 10px 90px #fbca57;
+}
+
+.footer {
+  display: flex;
+  margin: 80px 0px 10px 0px;
+  font-family: Fredericka the Great;
+  font-size: 14px;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  margin: 0px 0 0 6px;
+}
+
+.footer2 {
+  margin-top: 75px;
+  margin-bottom: 10px;
+  /* position: absolute;
+  bottom: 0; */
+  display: flex;
+  justify-content: space-around;
+  /* width: 100%; */
+}
+
+.footer2 img {
+  width: 70px;
+  height: 70px;
+  margin: 0px 0 0 6px;
+}
